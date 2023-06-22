@@ -1,0 +1,126 @@
+function maxEnchant(i: item) :: item:
+    if "%{_i}'s type%" contains "sword":
+        disenchant {_i}
+        enchant {_i} with sharpness 5
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with sweeping edge 3
+        enchant {_i} with knockback 2
+        enchant {_i} with fire aspect 2
+        enchant {_i} with looting 3
+        return {_i}
+    else if "%{_i}'s type%" contains "pickaxe":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with efficiency 5
+        enchant {_i} with fortune 3
+        return {_i}
+    else if "%{_i}'s type%" contains "axe":
+        disenchant {_i}
+        enchant {_i} with sharpness 5
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with efficiency 5
+        enchant {_i} with fortune 3
+        return {_i}
+    else if "%{_i}'s type%" contains "shovel":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with efficiency 5
+        enchant {_i} with fortune 3
+        return {_i}
+    else if "%{_i}'s type%" contains "hoe":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with efficiency 5
+        enchant {_i} with fortune 3
+        return {_i}
+    else if "%{_i}'s type%" contains "trident":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with loyalty 3
+        enchant {_i} with channeling
+        enchant {_i} with impaling 5
+        return {_i}
+    else if "%{_i}'s type%" contains "fishing rod":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with luck of the sea 3
+        enchant {_i} with lure 3
+        return {_i}
+    else if "%{_i}'s type%" contains "fishing rod":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with luck of the sea 3
+        enchant {_i} with lure 3
+        return {_i}
+    else if "%{_i}'s type%" contains "shield":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        return {_i}
+    else if "%{_i}'s type%" is "bow":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with punch 2
+        enchant {_i} with power 5
+        enchant {_i} with infinity
+        enchant {_i} with flame
+        return {_i}
+    else if "%{_i}'s type%" contains "crossbow":
+        disenchant {_i}
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with quick charge 3
+        enchant {_i} with multishot
+        enchant {_i} with piercing 4
+        return {_i}
+    else if "%{_i}'s type%" contains "helmet" or "turtle shell":
+        disenchant {_i}
+        enchant {_i} with protection 4
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with aqua affinity
+        enchant {_i} with respiration 3
+        enchant {_i} with thorns 3
+        return {_i}
+    else if "%{_i}'s type%" contains "chestplate":
+        disenchant {_i}
+        enchant {_i} with blast protection 4
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with thorns 3
+        return {_i}
+    else if "%{_i}'s type%" contains "chestplate":
+        disenchant {_i}
+        enchant {_i} with blast protection 4
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with thorns 3
+        return {_i}
+    else if "%{_i}'s type%" contains "leggings":
+        disenchant {_i}
+        enchant {_i} with protection 4
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with thorns 3
+        return {_i}
+    else if "%{_i}'s type%" contains "boots":
+        disenchant {_i}
+        enchant {_i} with protection 4
+        enchant {_i} with unbreaking 3
+        enchant {_i} with mending
+        enchant {_i} with thorns 3
+        enchant {_i} with swift sneak 3
+        enchant {_i} with soul speed 3
+        enchant {_i} with depth strider 3
+        return {_i}
+    else:
+        return {_i}
