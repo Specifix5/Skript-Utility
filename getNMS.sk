@@ -1,0 +1,21 @@
+#requires skript-reflect or skript-mirror
+
+function getNMSBlock(block: block, val: string) :: object:
+    set {_data} to "%{_block}.getNMS()%"
+    set {_type} to "%{_block}.getType()%"
+    set {_type} to lowercase({_type})
+    replace all "<none>" with "_" in {_type}
+    set {_data} to removeFirstChars((length of "Block{minecraft:%{_type}%}" - 1), {_data})
+    replace all "}" with "" in {_data}
+    replace all "[" with "" in {_data}
+    replace all "]" with "" in {_data}
+    set {_nms::*} to {_data} split at ","
+    loop {_nms::*}:
+        set {_nmsvalue::*} to loop-value split at "="
+        if {_nmsvalue::1} is {_val}:
+            return {_nmsvalue::2}
+
+#example
+#target block is a noteblock with note 12
+#send "Note: %getNMSBlock(target block, "note")%"
+#will return "Note: 12"
