@@ -1,4 +1,5 @@
 #requires skript-reflect or skript-mirror
+#requires stringUtils.sk
 
 function getNMSBlock(block: block, val: string) :: object:
     set {_data} to "%{_block}.getNMS()%"
