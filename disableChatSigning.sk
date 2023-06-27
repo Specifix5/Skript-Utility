@@ -1,0 +1,3 @@
+on chat:
+    cancel event
+    broadcast chat format
